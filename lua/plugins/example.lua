@@ -9,32 +9,12 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    priority = 1000,
-    config = function()
-      require("catppuccin").setup({
-        flavour = "mocha", -- latte, frappe, macchiato, mocha
-        transparent_background = true,
-        integrations = {
-          treesitter = true,
-          lsp_trouble = true,
-          cmp = true,
-          gitsigns = true,
-          telescope = true,
-          nvimtree = true,
-          which_key = true,
-        },
-      })
-      vim.cmd.colorscheme("catppuccin")
-    end,
-  },
   -- Configure LazyVim to load gruvbox
+  { "ellisonleao/gruvbox.nvim" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "gruvbox",
     },
   },
 
