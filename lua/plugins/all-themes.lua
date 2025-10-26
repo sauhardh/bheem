@@ -60,6 +60,7 @@ return {
   },
   {
     "Mofiqul/vscode.nvim",
+    name = "vscode",
     lazy = true,
     priority = 1000,
   },
