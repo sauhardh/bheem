@@ -1,5 +1,3 @@
-# BHEEM
-
 ---
 
 ```text
@@ -20,5 +18,5 @@
                                       ▒▒▓
 ```
 
-**BHEEM**, a powerful tool for battling filthy bugs in the coding arena.
+**BHEEM**, a powerful tool for battling filthy bugs in the coding arena.</br>
 A lazyvim extension for warriors wielding a mace in hand.
