@@ -292,6 +292,15 @@ return {
       { "<leader>un", function() Snacks.notifier.hide() end, desc = "Dismiss All Notifications" },
     },
   },
+  -- notifier
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      timeout = 5000,
+      background_colour = "#000000",
+      render = "wrapped-compact",
+    },
+  },
 
   {
     "snacks.nvim",

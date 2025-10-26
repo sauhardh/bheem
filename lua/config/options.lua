@@ -6,7 +6,7 @@ vim.g.ai_cmp = false -- ai completion disabled
 vim.g.lazyvim_cmp = "nvim-cmp"
 vim.g.ts_highlight_lua = true
 vim.g.semantic_tokens_enabled = true
-
+vim.opt.winbar = "%=%m %f"
 vim.g.mapleader = " "
 
 vim.scriptencoding = "utf-8"
