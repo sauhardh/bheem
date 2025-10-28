@@ -8,6 +8,7 @@ vim.g.ts_highlight_lua = true
 vim.g.semantic_tokens_enabled = true
 vim.opt.winbar = "%=%m %f"
 vim.g.mapleader = " "
+vim.opt.linebreak = true
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
@@ -31,7 +32,7 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.backspace = { "start", "eol", "indent" }
 vim.opt.path:append({ "**" })
 vim.opt.wildignore:append({ "*/node_modules/*" })
