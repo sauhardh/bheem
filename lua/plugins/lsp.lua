@@ -5,10 +5,7 @@ return {
       servers = {
         -- js/ts
         eslint = {
-          settings = {
-            workingDirectory = { mode = "auto" },
-            format = true,
-          },
+          enabled = false,
         },
       },
       -- ts/js/tsx

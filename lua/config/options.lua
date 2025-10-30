@@ -8,7 +8,6 @@ vim.g.ts_highlight_lua = true
 vim.g.semantic_tokens_enabled = true
 vim.opt.winbar = "%=%m %f"
 vim.g.mapleader = " "
-vim.opt.linebreak = true
 
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
