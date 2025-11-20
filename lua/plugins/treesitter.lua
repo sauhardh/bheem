@@ -17,6 +17,7 @@ return {
         "sql",
         "vim",
         "lua",
+        "cpp",
       },
       auto_install = true,
       query_linter = {
