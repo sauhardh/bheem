@@ -10,11 +10,12 @@ return {
         },
       },
       ensure_installed = {
-        "pyright",
+        -- "pyright",
         "rust-analyzer",
         "eslint-lsp",
         "vtsls",
         "clangd",
+        "ruff-lsp",
       },
     },
   },

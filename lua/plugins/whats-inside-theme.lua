@@ -1,7 +1,6 @@
 if true then
   return {}
 end
-
 -- This is what inside theme.lua.
 -- theme.lua is mapped to omarchy config so its content is hidden in github
 -- This function is to apply the colorscheme of "vscode"
