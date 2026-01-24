@@ -52,19 +52,8 @@ return {
           },
         },
 
-        -- rust
-        rust_analyzer = {
-          settings = {
-            ["rust_analyzer"] = {
-              cargo = {
-                allFeatures = true,
-              },
-              checkOnSave = {
-                command = "clippy",
-              },
-            },
-          },
-        },
+        -- rust - disabled here, using rustaceanvim instead (see rust.lua)
+        rust_analyzer = { enabled = false },
         -- cpp
         clangd = {
           cmd = { "clangd", "--background-index" },
