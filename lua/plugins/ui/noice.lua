@@ -2,7 +2,7 @@ return {
   -- Highly experimental plugin that completely replaces the UI for messages, cmdline and the popupmenu.
   {
     "folke/noice.nvim",
-    enabled = false, -- TEMPORARILY DISABLED - treesitter parser issue
+    enabled = true, -- TEMPORARILY DISABLED - treesitter parser issue
     event = "VeryLazy",
     opts = {
       lsp = {

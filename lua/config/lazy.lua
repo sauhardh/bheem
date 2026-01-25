@@ -27,6 +27,11 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.util.mini-hipatterns" },
     -- import/override with your plugins
     { import = "plugins" },
+    { import = "plugins.core" },
+    { import = "plugins.editor" },
+    { import = "plugins.lang" },
+    { import = "plugins.lsp" },
+    { import = "plugins.ui" },
   },
   -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
   -- have outdated releases, which may break your Neovim install.
