@@ -14,7 +14,7 @@ return {
           package.loaded["plugins.theme"] = nil
 
           vim.schedule(function()
-            local ok, theme_spec = pcall(require, "plugins.theme")
+            local ok, theme_spec = pcall(require, "plugins.ui.theme")
             if not ok then
               return
             end
