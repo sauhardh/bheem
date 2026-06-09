@@ -25,6 +25,8 @@ A lazyvim extension for warriors wielding a mace in hand.
 
 BHEEM is an extended, feature-rich configuration built on top of **LazyVim**, tailored to provide a smooth and powerful coding experience out-of-the-box. It has by default `vs-code` theme.
 
+👉 **[View all custom keymaps in KEYMAPS.md](./KEYMAPS.md)**
+
 ### 🛠️ Core Capabilities
 
 - **Telescope** for fast fuzzy finding, live grepping, and project navigation.
@@ -93,4 +95,4 @@ Simply launch Neovim from your terminal:
 nvim
 ```
 
-**Lazy.nvim** will automatically bootstrap and start installing all the predefined plugins. Wait a moment for it to complete the first-time setup, and you're ready to battle those bugs!
+**Bheem** will automatically bootstrap and start installing all the predefined plugins. Wait a moment for it to complete the first-time setup, and you're ready to battle those bugs!
