@@ -21,6 +21,7 @@ return {
         pyright = {
           settings = {
             python = {
+              pythonPath = ".venv/bin/python",
               analysis = {
                 typeCheckingMode = "basic",
                 autoSearchPaths = true,

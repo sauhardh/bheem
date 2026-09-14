@@ -33,6 +33,10 @@ return {
           },
           inlayHints = { -- Drop non-essential hints
             chainingHints = { enable = true },
+            typeHints = { enable = true },
+            parameterHints = { enable = true },
+            closureReturnTypeHints = { enable = "always" },
+            bindingModeHints = { enable = true },
             maxLength = 25,
           },
         },
