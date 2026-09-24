@@ -1,49 +1,40 @@
 return {
-  "mrcjkb/rustaceanvim",
-  version = "^4", -- Recommended
-  ft = { "rust" }, -- lazy load for Rust files only
-  opts = {
-    server = {
-      on_attach = function(client, bufnr)
-        local wk = require("which-key")
-        wk.add({ -- Ensure mappings are buffer-specific
-          ["<leader>cR"] = {
-            function()
-              vim.cmd.RustLsp("codeAction")
-            end,
-            desc = "Code Action",
-            buffer = bufnr,
-          },
-          ["<leader>dr"] = {
-            function()
-              vim.cmd.RustLsp("debuggables")
-            end,
-            desc = "Rust Debuggables",
-            buffer = bufnr,
-          },
-        })
-      end,
-      default_settings = {
-        ["rust_analyzer"] = {
-          cargo = {
-            allFeatures = false, -- might improve performance
-          },
-          checkOnSave = {
-            command = "check", -- use "check" instead of "clippy"
-          },
-          inlayHints = { -- Drop non-essential hints
-            chainingHints = { enable = true },
-            typeHints = { enable = true },
-            parameterHints = { enable = true },
-            closureReturnTypeHints = { enable = "always" },
-            bindingModeHints = { enable = true },
-            maxLength = 25,
+  {
+    "mrcjkb/rustaceanvim",
+    version = false, -- use the latest version compatible with Neovim 0.12
+    opts = {
+      -- Use the rustup-managed rust-analyzer, NOT the Mason standalone one.
+      -- The Mason standalone build has no sysroot/stdlib, so Option<T>, Vec<T>
+      -- etc. resolve as {unknown} and method completions (map, unwrap, etc.) are missing.
+      server = {
+        cmd = { vim.fn.expand("~/.cargo/bin/rust-analyzer") },
+        default_settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              allFeatures = true,
+              loadOutDirsFromCheck = true,
+              buildScripts = { enable = true },
+            },
+            checkOnSave = true,
+            procMacro = { enable = true },
+            inlayHints = {
+              bindingModeHints = { enable = true },
+              chainingHints = { enable = true },
+              closingBraceHints = { enable = true, minLines = 25 },
+              closureReturnTypeHints = { enable = "always" },
+              lifetimeElisionHints = { enable = "always", useParameterNames = true },
+              parameterHints = { enable = true },
+              reborrowHints = { enable = "always" },
+              renderColons = true,
+              typeHints = {
+                enable = true,
+                hideClosureInitialization = false,
+                hideNamedConstructor = false,
+              },
+            },
           },
         },
       },
     },
   },
-  config = function(_, opts)
-    vim.g.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
-  end,
 }

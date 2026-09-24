@@ -18,15 +18,19 @@ return {
           },
         },
         -- Python
+        -- NOTE: pythonPath is NOT hardcoded here. Pyright auto-detects the
+        -- active interpreter via venvPath + the autocmd in autocmds.lua.
+        -- Use :LspPyrightSetPythonPath /path/to/python to override manually.
         pyright = {
           settings = {
             python = {
-              pythonPath = ".venv/bin/python",
               analysis = {
                 typeCheckingMode = "basic",
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
                 diagnosticMode = "workspace",
+                -- Point at miniconda envs so pyright can find conda envs
+                venvPath = vim.fn.expand("~/miniconda3/envs"),
 
                 diagnosticSeverityOverrides = {
                   reportUnusedImport = false,

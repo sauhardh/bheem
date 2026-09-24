@@ -11,7 +11,9 @@ return {
       },
       ensure_installed = {
         -- "pyright",
-        "rust-analyzer",
+        -- rust-analyzer is NOT installed via Mason — we use the rustup-managed
+        -- version (~/.cargo/bin/rust-analyzer) which has full stdlib access.
+        -- Installing via Mason gives a standalone build with no sysroot/stdlib.
         "eslint-lsp",
         "vtsls",
         "clangd",
