@@ -42,7 +42,7 @@ First-class support pre-configured for modern development:
 - **Python**
 - **Rust**
 - **TypeScript/JavaScript** (with built-in JSON and Tailwind CSS support)
-- C\#/dotnet
+- **C#/dotnet**
 
 ## 🚀 Installation & Configuration
 
