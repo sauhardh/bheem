@@ -9,6 +9,12 @@ return {
           package_uninstalled = "✗",
         },
       },
+      -- Add the Crashdummyy registry so Mason can install the same roslyn
+      -- language server version that ships with VS Code C# Dev Kit.
+      registries = {
+        "github:mason-org/mason-registry",
+        "github:Crashdummyy/mason-registry",
+      },
       ensure_installed = {
         -- "pyright",
         -- rust-analyzer is NOT installed via Mason — we use the rustup-managed
@@ -18,6 +24,10 @@ return {
         "vtsls",
         "clangd",
         "ruff-lsp",
+        -- C# / .NET: Roslyn language server (VS Code C# Dev Kit engine)
+        "roslyn",
+        -- C# formatter
+        "csharpier",
       },
     },
   },
